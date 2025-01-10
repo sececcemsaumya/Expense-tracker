@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
 app.use(express.json()) //Middleware
 
 
-mongoose.connect("mongodb://localhost:27017/expense").then(()=>{
+mongoose.connect("mongodb+srv://saumya:saumya2005@cluster0.ii2ki.mongodb.net/").then(()=>{
     console.log("connected to database")
 })
 
