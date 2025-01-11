@@ -10,10 +10,11 @@ app.listen(3000,()=>{
 })*/
 var express = require('express')
 const{v4:uuidv4}=require('uuid') //Import uuid
+const cors = require('cors')
 const app = express();
 const mongoose = require('mongoose');
 app.use(express.json()) //Middleware
-
+app.use(cors()) //cors-->middleware used to avoid cross origin resource sharing error(cors)
 
 mongoose.connect("mongodb+srv://saumya:saumya2005@cluster0.ii2ki.mongodb.net/").then(()=>{
     console.log("connected to database")
